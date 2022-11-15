@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Natube/static/css/main.7c6c5bcc.css",
+    "main.js": "/Natube/static/js/main.ae77ca87.js",
+    "index.html": "/Natube/index.html",
+    "main.7c6c5bcc.css.map": "/Natube/static/css/main.7c6c5bcc.css.map",
+    "main.ae77ca87.js.map": "/Natube/static/js/main.ae77ca87.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c6c5bcc.css",
+    "static/js/main.ae77ca87.js"
+  ]
+}
