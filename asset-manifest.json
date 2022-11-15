@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Natube/static/css/main.7c6c5bcc.css",
-    "main.js": "/Natube/static/js/main.ae77ca87.js",
+    "main.js": "/Natube/static/js/main.2831c5db.js",
     "index.html": "/Natube/index.html",
     "main.7c6c5bcc.css.map": "/Natube/static/css/main.7c6c5bcc.css.map",
-    "main.ae77ca87.js.map": "/Natube/static/js/main.ae77ca87.js.map"
+    "main.2831c5db.js.map": "/Natube/static/js/main.2831c5db.js.map"
   },
   "entrypoints": [
     "static/css/main.7c6c5bcc.css",
-    "static/js/main.ae77ca87.js"
+    "static/js/main.2831c5db.js"
   ]
 }
