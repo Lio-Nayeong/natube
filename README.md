@@ -6,3 +6,5 @@
   > React Hooks : useState, useEffect
   
   > Node modules : react-icons, react-router-dom, axios, moment, dotenv
+
+![캡처](https://user-images.githubusercontent.com/118183308/201982777-41cf1510-1618-408f-95c5-995e4323bb8f.JPG)
