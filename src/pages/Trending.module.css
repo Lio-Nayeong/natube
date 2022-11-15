@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  max-width: 862px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.trendingImage {
+  width: 80px;
+  height: 80px;
+  margin: 0 24px 0 0;
+  flex: none;
+  border-radius: 50%;
+}
+.title {
+  overflow: hidden;
+  max-width: 100%;
+  font-size: 20px;
+}
+@media screen and (max-width: 529px) {
+  .trendingImage {
+    display: none;
+  }
+}

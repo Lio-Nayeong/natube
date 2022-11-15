@@ -1,0 +1,17 @@
+.black {
+  background-color: #030303;
+  color: white;
+}
+.gray {
+  background-color: #f2f2f2;
+}
+
+.black,
+.gray {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin: 12px;
+  margin-left: 0;
+  cursor: pointer;
+}

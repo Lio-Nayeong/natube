@@ -1,0 +1,98 @@
+.menu {
+  position: fixed;
+  width: 230px;
+  height: 100%;
+  top: 56px;
+  padding: 12px;
+  box-sizing: border-box;
+  background-color: white;
+}
+.link,
+.focused,
+.unavailable {
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+  text-decoration: none;
+  align-items: center;
+}
+.line {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+.line > div:first-child {
+  padding: 2px 16px;
+}
+.link {
+  background-color: white;
+  color: black;
+}
+.link:hover {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 24px;
+}
+.focused {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: black;
+}
+.focused:hover {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.unavailable {
+  background-color: white;
+  color: rgba(128, 128, 128, 0.8);
+}
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 990px) {
+  .offMini {
+    display: none;
+  }
+  .line {
+    border-bottom: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .menu {
+    width: 72px;
+  }
+  .link,
+  .focused {
+    flex-direction: column;
+    height: 67px;
+  }
+  .icon {
+    margin: 6px;
+  }
+  .text {
+    margin: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .menu {
+    display: none;
+  }
+}
+
+.footer {
+  font-size: 13px;
+  color: #606060;
+  padding: 2px 16px;
+}
