@@ -53,7 +53,11 @@ function Subscription() {
       <ContentsLayout>
         {loadedSub.map(function (data, index) {
           return (
-            <SubscriptionCard data={data} key={`subscription-card-${index}`} />
+            <SubscriptionCard
+              apiKey={apiKey}
+              data={data}
+              key={`subscription-card-${index}`}
+            />
           );
         })}
       </ContentsLayout>
