@@ -3,31 +3,33 @@ import axios from "axios";
 import moment from "moment";
 import "moment/locale/ko";
 import styles from "./HomeCard.module.css";
-import { RiEmotionUnhappyLine } from "react-icons/ri";
 import { ProcessViewCount, ProcessUploadDate } from "../../utils";
 
-function HomeCard({ data }) {
-  // const apiKey = process.env.REACT_APP_YOUTUBE_API_KEY;
-  // const getData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       "https://www.googleapis.com/youtube/v3/channels",
-  //       {
-  //         params: {
-  //           //url 뒤에 붙는 값
-  //           part: "snippet",
-  //           id: data.snippet.channelId,
-  //           fields: "items(snippet(thumbnails))",
-  //           key: apiKey,
-  //         },
-  //       }
-  //     );
-  //     console.log(response.data.items);
-  //   } catch (e) {
-  //     // 오류 발생
-  //     console.error("error : ", e);
-  //   }
-  // };
+function HomeCard({ data, apiKey }) {
+  const [thumbnailUrl, setThumbnailUrl] = useState("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://www.googleapis.com/youtube/v3/channels",
+          {
+            params: {
+              part: "snippet",
+              id: data.snippet.channelId,
+              fields: "items(snippet(thumbnails))",
+              key: apiKey,
+            },
+          }
+        );
+        setThumbnailUrl(response.data.items[0].snippet.thumbnails.default.url);
+      } catch (error) {
+        console.error("error: ", error);
+      }
+    };
+
+    fetchData();
+  }, [data.snippet.channelId, apiKey]);
 
   return (
     <a
@@ -41,12 +43,11 @@ function HomeCard({ data }) {
       />
       <div className={styles.info}>
         <a href={`https://www.youtube.com/channel/${data.snippet.channelId}`}>
-          <RiEmotionUnhappyLine className={styles.channelImg} />
-          {/* <img
+          <img
             className={styles.channelImg}
-            src={`https://www.youtube.com/channel/${data.snippet.channelId}`}
+            src={thumbnailUrl}
             alt={`${data.snippet.channelTitle} 프로필 사진`}
-          /> */}
+          />
         </a>
 
         <div>

@@ -125,7 +125,13 @@ function Home() {
       <div className={styles.container}>
         <div className={styles.grid}>
           {loadedHome.map(function (data, index) {
-            return <HomeCard key={`home-card-${index}`} data={data} />;
+            return (
+              <HomeCard
+                key={`home-card-${index}`}
+                data={data}
+                apiKey={apiKey}
+              />
+            );
           })}
         </div>
       </div>
